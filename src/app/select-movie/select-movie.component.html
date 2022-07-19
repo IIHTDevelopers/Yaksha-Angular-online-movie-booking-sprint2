@@ -1,0 +1,43 @@
+<div>
+    <app-breadcrumb>
+        <p>Home | Movie</p>
+    </app-breadcrumb>
+
+    <div *ngIf="movies.length == 0" class="errorMessage">
+        We do not contain any movie in db. Please try after some time.
+    </div>
+
+    <div *ngIf="movies.length > 0" class="movies">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Image</th>
+                    <th>Language</th>
+                    <th>Lenght (Minutes)</th>
+                    <th>Ratings</th>
+                    <th>ReleasedDate</th>
+                    <th>ShowTime</th>
+                    <th>Button</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movie of movies">
+                    <td>{{movie.id}}</td>
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.genre}}</td>
+                    <td>{{movie.image}}</td>
+                    <td>{{movie.language}}</td>
+                    <td>{{movie.length}}</td>
+                    <td>{{movie.ratings}}</td>
+                    <td>{{movie.releasedDate|date:'dd-MM-yyyy'}}</td>
+                    <td>{{movie.showTime}}</td>
+                    <td><button (click)="selectMovie(movie)">Continue</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
