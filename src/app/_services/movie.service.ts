@@ -14,14 +14,14 @@ export class MovieService {
   constructor(private http:HttpClient) { }
 
   getAllMovies(){
-    return this.http.get(this.host);
+    
   }
 
   set movie(m:Movie){
-    this.m = m;
+   
   }
   get movie(){
-    return this.m;
+    return null ;
   }
 
 
