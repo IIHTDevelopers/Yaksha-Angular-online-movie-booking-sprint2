@@ -11,9 +11,9 @@ export class TicketService {
   constructor(private http:HttpClient) { }
 
   bookTicket(ticket:any){
-    return this.http.post(this.host, ticket);
+    
   }
   getAllTickets(){
-    return this.http.get(this.host);
+   
   }
 }
