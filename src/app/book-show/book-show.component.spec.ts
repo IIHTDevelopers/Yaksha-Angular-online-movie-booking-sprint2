@@ -41,7 +41,7 @@ describe('BookShowComponent', () => {
     });
   });
 
-  describe("functional", () => {
+  describe("business", () => {
 
     it('should show booked ticket details when booking is successful', () => {
       component.selectedMovie = db.movies[0];
